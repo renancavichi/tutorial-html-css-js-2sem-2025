@@ -10,3 +10,41 @@ h1 {
 span { 
     color: #04047d;
 }
+
+#header {
+    height: 80px;
+    background-color: #867d0b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar {
+    height: 400px;
+    width: 120px;
+    background-color: #15bf23;
+}
+
+#content{
+    width: 680px;
+    background-color: #e0abec;
+}
+
+#footer {
+   height: 150px;
+   background-color: #28292d;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #FFFFFF 
+}
+
+.flex-row {
+    display: flex;
+}
+
+#menu {
+    height: 50px;
+    width: 50px;
+    background-color: #e4267c;
+}
