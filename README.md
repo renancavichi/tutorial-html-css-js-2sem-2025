@@ -1,11 +1,10 @@
 # Tópicos Importantes
 
-
 ## HTML
 - Doctype html 5
 - Estrutura Básica do HTML
     - html, head, title, body
-- style
+- Tag Style
 - Tags de Texto: h1...h6, p
 - Destaque do Texto: b, i, span
 - div (id e class)

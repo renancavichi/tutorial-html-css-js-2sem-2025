@@ -19,6 +19,11 @@ span {
     align-items: center;
 }
 
+#header img{
+    width: 60px;
+    height: 60px;
+}
+
 #sidebar {
     height: 400px;
     width: 120px;
@@ -44,7 +49,15 @@ span {
 }
 
 #menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 50px;
-    width: 50px;
+    width: 400px;
     background-color: #e4267c;
+}
+
+#menu a{
+    color: #FFF;
+    text-decoration: none;
 }
