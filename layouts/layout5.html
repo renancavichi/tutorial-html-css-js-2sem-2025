@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout 5</title>
+    <style>
+        header {
+            display: flex;
+            height: 90px;
+            background-color: bisque;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        header div{
+           width: 100px;
+           height: 70px;
+           background-color: black; 
+        }
+        header nav{
+           width: 200px;
+           height: 70px;
+           background-color: black;   
+        }
+        .flexrow {
+            display: flex;
+        }
+        footer {
+            display: flex;
+            height: 200px;
+            background-color: bisque;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+        }
+        section {
+            display: flex;
+            height: 400px;
+            background-color: aquamarine;
+            margin: 10px 0;
+            align-items: center;
+        }
+        section div{
+            background-color: black; 
+        }
+        #hero {
+           justify-content: center;
+           gap: 20px;
+        }
+        #testimony {
+           justify-content: space-around;
+        }
+        #image-hero{
+            width: 100px;
+            height: 120px;
+        }
+        .text-hero{
+            width: 200px;
+            height: 40px;
+            margin: 15px 0;
+        }
+        .card{
+            width: 150px;
+            height: 180px;
+        }
+        footer nav{
+            width: 150px;
+            height: 180px;
+            background-color: black;
+        }
+        #social{
+            width: 150px;
+            height: 180px;
+        }
+        #social div{
+            width: 150px;
+            height: 40px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <div></div>
+        <nav></nav>
+   </header>
+   <section id="hero">
+        <div id="image-hero"></div>
+        <div style="background-color: transparent;">
+            <div class="text-hero"></div>
+            <div class="text-hero"></div>
+        </div>
+   </section>
+   <section id="testimony">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+   </section>
+   <footer>
+        <nav></nav>
+        <div id="social">
+            <div></div>
+        </div>
+   </footer>
+</body>
+</html>

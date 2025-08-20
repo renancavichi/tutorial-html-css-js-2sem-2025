@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout 6</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            height: 90px;
+            background-color: black;
+        }
+        .flexrow{
+            display: flex;
+            gap: 20px;
+        }
+        aside {
+            width: 200px;
+            min-height: calc(100vh - 210px);
+            background-color: bisque;
+        }
+        main {
+            width: 780px;
+            min-height: calc(100vh - 210px);
+            background-color: aquamarine;
+        }
+        footer {
+            height: 120px;
+            background-color: black;
+        }
+        .wrapper{
+           margin: 0 auto;
+           width: 1000px;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <div class="wrapper" style="height: 90px;">
+
+    </div>
+   </header>
+   <div class="wrapper">
+        <div class="flexrow">
+            <aside></aside>
+            <main>
+                <p>Hypertext Markup Language (HTML) is the standard markup language[a] for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance. HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets.</p>      
+                <p>Hypertext Markup Language (HTML) is the standard markup language[a] for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance. HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets.</p>
+                
+            </main>
+    </div>
+   </div>
+   
+   <footer>
+    <div class="wrapper" style="height: 120px;">
+
+    </div>
+   </footer>
+</body>
+</html>
