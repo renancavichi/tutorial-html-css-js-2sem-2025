@@ -13,6 +13,36 @@ header .wrapper .flexrow{
     align-items: center;
 }
 
+header .wrapper{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style-type: none;
+}
+
+header nav ul li a{
+    padding: 32px 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, .active{
+    border-bottom: 2px solid #ec7b11;
+    color: #ec7b11;
+}
+
+
+/* header nav{
+    margin: 0 0 0 auto;
+} */
+
 header img{
     width: 50px;
     height: 50px;
