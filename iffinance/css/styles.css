@@ -5,15 +5,15 @@ body, html {
     color: #FFF;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
-header {
+body > header {
     height: 90px;
     background-color: black;
 }
-header .wrapper .flexrow{
+body > header .wrapper .flexrow{
     align-items: center;
 }
 
-header .wrapper{
+body > header .wrapper{
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -43,7 +43,7 @@ header nav ul li a:hover, .active{
     margin: 0 0 0 auto;
 } */
 
-header img{
+body > header img{
     width: 50px;
     height: 50px;
 }
@@ -57,15 +57,43 @@ aside {
     min-height: calc(100vh - 210px);
     background-color: bisque;
 }
-main {
+body > div.wrapper > div > main {
     width: 100%;
     min-height: calc(100vh - 210px);
 }
-footer {
+body > footer {
     height: 120px;
     background-color: black;
 }
 .wrapper{
     margin: 0 auto;
     width: 1000px;
+}
+
+.card-stock{
+    width: 200px;
+    background-color: black;
+    padding: 20px;
+}
+
+.card-stock header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-stock header h2, .card-stock header h3{
+    margin: 0;
+}
+
+.card-stock main{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 24px;
+}
+
+.card-stock footer{
+    display: flex;
+    justify-content: space-between;
 }
