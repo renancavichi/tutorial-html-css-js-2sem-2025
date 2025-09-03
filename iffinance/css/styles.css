@@ -25,6 +25,8 @@ header nav ul{
 
 header nav ul li{
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
 header nav ul li a{
@@ -36,6 +38,16 @@ header nav ul li a{
 header nav ul li a:hover, .active{
     border-bottom: 2px solid #ec7b11;
     color: #ec7b11;
+}
+
+header nav ul li button{
+    background: #ec7b11;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: none;
+    margin: 0 0 0 15px;
+    cursor: pointer;
 }
 
 
@@ -59,7 +71,8 @@ aside {
 }
 body > div.wrapper > div > main {
     width: 100%;
-    min-height: calc(100vh - 210px);
+    min-height: calc(100vh - 250px);
+    padding: 20px;
 }
 body > footer {
     height: 120px;
@@ -71,9 +84,11 @@ body > footer {
 }
 
 .card-stock{
-    width: 200px;
+    width: 185px;
     background-color: black;
     padding: 20px;
+    height: fit-content;
+    border-radius: 10px;
 }
 
 .card-stock header{
@@ -96,4 +111,63 @@ body > footer {
 .card-stock footer{
     display: flex;
     justify-content: space-between;
+}
+
+.modal{
+    background: #242424c3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal main {
+    background: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.modal main h1{
+    color: #000;
+    margin: 0;
+}
+
+.modal main label{
+    color: #000000;
+    margin: 10px 0 0 0;
+}
+
+.modal main form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.modal main form input[type="text"], .modal main form select{
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.modal main form input[type="submit"], .modal main button{
+    background: #ec7b11;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: none;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+#cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }

@@ -1,49 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>IFFinance</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script>
+        /*
+        Exemplo de
+        Bloco de Comentários
+        */
+        //alert("Olá Mundo Javascript!")
+
+        let nome = "Renan" // pode ser alterada
+        const rua = "Avenida Rio G. do Sul" // cria uma constante
+        var idade = 38 // pode ser alterada
+
+        nome = "Ana"
+        var idade = 40
+
+        console.log(idade)
+    </script>
 </head>
+
 <body>
-   <header>
-    <div class="wrapper" style="height: 90px;">
-        <div class="flexrow" style="height: 90px;">
-            <img src="img/logo.svg">
-            <h1><span style="color:#ec7b11;">IF</span>Finance</h1>
+    <header>
+        <div class="wrapper" style="height: 90px;">
+            <div class="flexrow" style="height: 90px;">
+                <img src="img/logo.svg">
+                <h1><span style="color:#ec7b11;">IF</span>Finance</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><button onclick="openModal()">Adicionar</button></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-   </header>
-   <div class="wrapper">
+    </header>
+    <div class="wrapper">
         <div class="flexrow">
             <main>
-                <div class="card-stock">
-                    <header>
-                        <h2>APPL</h2>
-                        <h3>Nasdaq</h3>
-                    </header>
-                    <main>
-                        <span>▲ US$ 235.00</span>
-                    </main>
-                    <footer>
-                        <span>Ativos: <span>10</span></span>
-                        <span>US$ 2,350.00</span>
-                    </footer>
+                <div id="cards">
+                    <div class="card-stock">
+                        <header>
+                            <h2>APPL</h2>
+                            <h3>Nasdaq</h3>
+                        </header>
+                        <main>
+                            <span>▲ US$ 235.00</span>
+                        </main>
+                        <footer>
+                            <span>Ativos: <span>10</span></span>
+                            <span>US$ 2,350.00</span>
+                        </footer>
+                    </div>
+                    <div class="card-stock">
+                        <header>
+                            <h2>APPL</h2>
+                            <h3>Nasdaq</h3>
+                        </header>
+                        <main>
+                            <span>▲ US$ 235.00</span>
+                        </main>
+                        <footer>
+                            <span>Ativos: <span>10</span></span>
+                            <span>US$ 2,350.00</span>
+                        </footer>
+                    </div>
+                    <div class="card-stock">
+                        <header>
+                            <h2>APPL</h2>
+                            <h3>Nasdaq</h3>
+                        </header>
+                        <main>
+                            <span>▲ US$ 235.00</span>
+                        </main>
+                        <footer>
+                            <span>Ativos: <span>10</span></span>
+                            <span>US$ 2,350.00</span>
+                        </footer>
+                    </div>
+                    <div class="card-stock">
+                        <header>
+                            <h2>APPL</h2>
+                            <h3>Nasdaq</h3>
+                        </header>
+                        <main>
+                            <span>▲ US$ 235.00</span>
+                        </main>
+                        <footer>
+                            <span>Ativos: <span>10</span></span>
+                            <span>US$ 2,350.00</span>
+                        </footer>
+                    </div>
+                    <div class="card-stock">
+                        <header>
+                            <h2>APPL</h2>
+                            <h3>Nasdaq</h3>
+                        </header>
+                        <main>
+                            <span>▲ US$ 235.00</span>
+                        </main>
+                        <footer>
+                            <span>Ativos: <span>10</span></span>
+                            <span>US$ 2,350.00</span>
+                        </footer>
+                    </div>
                 </div>
             </main>
+        </div>
     </div>
-   </div>
-   
-   <footer>
-    <div class="wrapper" style="height: 120px;">
 
+    <footer>
+        <div class="wrapper" style="height: 120px;">
+
+        </div>
+    </footer>
+
+    <div class="modal">
+        <main>
+            <h1>Cadastrar</h1>
+            <form onsubmit="addTicker(event)">
+                <label for="ticker">Ticker:</label>
+                <input type="text" id="ticker" name="ticker">
+                <label for="bolsa">Bolsa:</label>
+                <select id="bolsa" name="bolsa">
+                    <option value="Nasdaq">Nasdaq</option>
+                    <option value="NYSE">NYSE</option>
+                </select>
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor" name="valor">
+                <label for="ativos">Ativos:</label>
+                <input type="text" id="ativos" name="ativos">
+                <input type="submit" value="Cadastrar">
+                <button type="button" onclick="closeModal()">Fechar</button>
+            </form>
+        </main>
     </div>
-   </footer>
 </body>
+<script src="js/main.js"></script>
+
 </html>
