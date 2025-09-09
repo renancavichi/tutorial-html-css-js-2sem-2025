@@ -9,7 +9,7 @@ function closeModal(){
 }
 
 function addTicker(event){
-   event.preventDefault()
+    event.preventDefault()
 
     const ticker = event.target.ticker.value
     const bolsa = event.target.bolsa.value
@@ -19,7 +19,7 @@ function addTicker(event){
     const total = valor * ativos
 
     const card = `
-        <div class="card-stock">
+        <div class="card-stock" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
             <header>
                 <h2>${ticker}</h2>
                 <h3>${bolsa}</h3>
@@ -31,9 +31,25 @@ function addTicker(event){
                 <span>Ativos: <span>${ativos}</span></span>
                 <span>US$ ${total}</span>
             </footer>
+            <div class="buttons">
+                <button type="button" onclick="">Editar</button>
+                <button type="button" onclick="">Excluir</button>
+            </div>
         </div>
     `
     const cards = document.querySelector("#cards")
-    cards.innerHTML += card
+    cards.innerHTML += card 
     closeModal()
+}
+
+function showButtons(event){
+    const cardStock = event.target
+    const buttons = cardStock.querySelector(".buttons")
+    buttons.style.display = "flex"
+}
+
+function hideButtons(event){
+    const cardStock = event.target
+    const buttons = cardStock.querySelector(".buttons")
+    buttons.style.display = "none"
 }

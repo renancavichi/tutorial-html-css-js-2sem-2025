@@ -84,6 +84,7 @@ body > footer {
 }
 
 .card-stock{
+    position: relative;
     width: 185px;
     background-color: black;
     padding: 20px;
@@ -155,7 +156,7 @@ body > footer {
     border: 1px solid #000;
 }
 
-.modal main form input[type="submit"], .modal main button{
+.modal main form input[type="submit"], button{
     background: #ec7b11;
     color: #FFF;
     border-radius: 15px;
@@ -170,4 +171,22 @@ body > footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d1d1dc9;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons button{
+    margin: 0;
 }
