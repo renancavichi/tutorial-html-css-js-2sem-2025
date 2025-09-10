@@ -34,7 +34,7 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="quem-somos.html">Quem Somos</a></li>
                     <li><a href="contato.html">Contato</a></li>
-                    <li><button onclick="openModal()">Adicionar</button></li>
+                    <li><button onclick="openModal('#add')">Adicionar</button></li>
                 </ul>
             </nav>
         </div>
@@ -43,20 +43,20 @@
         <div class="flexrow">
             <main>
                 <div id="cards">
-                    <div class="card-stock" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
+                    <div class="card-stock" id="APPL" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                         <header>
                             <h2>APPL</h2>
                             <h3>Nasdaq</h3>
                         </header>
                         <main>
-                            <span>▲ US$ 235.00</span>
+                            <span>▲ US$ <span>235.00</span></span>
                         </main>
                         <footer>
                             <span>Ativos: <span>10</span></span>
                             <span>US$ 2,350.00</span>
                         </footer>
                         <div class="buttons">
-                            <button type="button" onclick="">Editar</button>
+                            <button type="button" onclick="openEditCard(event)">Editar</button>
                             <button type="button" onclick="deleteCard(event)">Excluir</button>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
         </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal" id="add">
         <main>
             <h1>Cadastrar</h1>
             <form onsubmit="addTicker(event)">
@@ -80,14 +80,35 @@
                 <label for="bolsa">Bolsa:</label>
                 <select id="bolsa" name="bolsa">
                     <option value="Nasdaq">Nasdaq</option>
-                    <option value="NYSE">NYSE</option>
+                    <option value="NYSE" selected="true">NYSE</option>
                 </select>
                 <label for="valor">Valor:</label>
                 <input type="text" id="valor" name="valor">
                 <label for="ativos">Ativos:</label>
                 <input type="text" id="ativos" name="ativos">
                 <input type="submit" value="Cadastrar">
-                <button type="button" onclick="closeModal()">Fechar</button>
+                <button type="button" onclick="closeModal('#add')">Fechar</button>
+            </form>
+        </main>
+    </div>
+    <div class="modal" id="edit">
+        <main>
+            <h1>Editar</h1>
+            <form onsubmit="editTicker(event)">
+                <input type="hidden" id="idcard" name="idcard">
+                <label for="ticker">Ticker:</label>
+                <input type="text" id="editticker" name="ticker">
+                <label for="bolsa">Bolsa:</label>
+                <select id="editbolsa" name="bolsa">
+                    <option value="Nasdaq">Nasdaq</option>
+                    <option value="NYSE">NYSE</option>
+                </select>
+                <label for="valor">Valor:</label>
+                <input type="text" id="editvalor" name="valor">
+                <label for="ativos">Ativos:</label>
+                <input type="text" id="editativos" name="ativos">
+                <input type="submit" value="Editar">
+                <button type="button" onclick="closeModal('#edit')">Fechar</button>
             </form>
         </main>
     </div>

@@ -8,7 +8,7 @@
 - Tags de Texto: h1...h6, p
 - Destaque do Texto: b, i, span
 - div (id e class)
-
+- Form (input [text, hidden], select)
 
 ## CSS
 - Externo, Interno e In-line
@@ -16,13 +16,17 @@
 - ID e Classes
 - Flexbox (display: flex e outros elementos) - https://flexboxfroggy.com/
 - seletores
-  - filho de
-  - , seletor e
 - margin e padding
 - medidas relatativas (% e vh e vw)
 - tipos de cores
 - font-family
+- position
 
+## JS
+- variáveis let, const e var
+- criação de funções
+- querySelector, getElementById, closest
+- event: event.target, event.preventDefault()
 
 ## Comandos Git
 
