@@ -29,7 +29,7 @@ function addTicker(event){
             </main>
             <footer>
                 <span>Ativos: <span>${ativos}</span></span>
-                <span>US$ ${total}</span>
+                <span class="total">US$ <span>${total}</span></span>
             </footer>
             <div class="buttons">
                 <button type="button" onclick="openEditCard(event)">Editar</button>
@@ -38,7 +38,10 @@ function addTicker(event){
         </div>
     `
     const cards = document.querySelector("#cards")
-    cards.innerHTML += card 
+    cards.innerHTML += card
+    
+    event.target.reset()
+    
     closeModal('#add')
 }
 
@@ -54,12 +57,21 @@ function editTicker(event){
     const total = valor * ativos
 
     const cardStockEdit = document.getElementById(idcard)
-    console.log(cardStockEdit)
 
-    const h2ticker = cardStockEdit.querySelector('header h2')
-    h2ticker.innerText = ticker
+    const h2Ticker = cardStockEdit.querySelector('header h2')
+    h2Ticker.innerText = ticker
  
-    //Todo
+    const h3Bolsa = cardStockEdit.querySelector('header h3')
+    h3Bolsa.innerText = bolsa
+
+    const spanValor = cardStockEdit.querySelector('main span span')
+    spanValor.innerText = valor
+
+    const spanAtivos = cardStockEdit.querySelector('footer span span')
+    spanAtivos.innerText = ativos
+
+    const spanTotal = cardStockEdit.querySelector('footer span.total span')
+    spanTotal.innerText = total
     
     closeModal('#edit')
 }
@@ -90,13 +102,14 @@ function openEditCard(event){
     const inputEditTicker = document.getElementById('editticker')
     inputEditTicker.value = ticker
 
+    const idCard = cardStock.getAttribute('id')
+    //cardStock.setAttribute("teste", "123") //Exemplo de setAttribute para adicionar um atributo em um elemento
     const inputIdCard = document.getElementById('idcard')
-    inputIdCard.value = ticker
+    inputIdCard.value = idCard
 
     const bolsa = cardStock.querySelector('header h3').innerText
     const selectEditBolsa = document.getElementById('editbolsa')
-    const option = selectEditBolsa.querySelector(`option[value=${bolsa}]`)
-    option.setAttribute('selected', 'true')
+    selectEditBolsa.value = bolsa
 
     const valor = cardStock.querySelector('main span span').innerText
     const inputEditValor = document.getElementById('editvalor')
