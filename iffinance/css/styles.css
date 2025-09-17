@@ -190,3 +190,16 @@ body > footer {
 .buttons button{
     margin: 0;
 }
+
+table, td, th{
+    border: 2px solid #FFF;
+}
+
+table{
+    width: 360px;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 5px 10px;
+}
